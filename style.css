@@ -24,3 +24,11 @@
 .form-input {
     border: 1px solid var(--secondary-color);
 }
+
+.form-error {
+    box-shadow: 0 0 4px red;
+}
+
+.form-valid {
+    box-shadow: 0 0 4px green;
+}
