@@ -1,3 +1,26 @@
+:root {
+    --primary-color: #036;
+    --secondary-color: #808080;
+    --text-color: #333;
+}
+
 * {
     box-sizing: border-box;
+}
+
+/* Form Elements */
+
+.form-title {
+    color: var(--primary-color);
+    min-width: max-content;
+    text-align: center;
+}
+
+.form-input,
+.form-label {
+    color: var(--text-color);
+}
+
+.form-input {
+    border: 1px solid var(--secondary-color);
 }
