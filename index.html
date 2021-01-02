@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Phone Entry Form</title>
-</head>
-<body>
-    <div class="wrapper"></div>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form
+        action="#"
+        method="POST"
+        id="phoneNumberEntryForm"
+        name="phoneNumberEntry"
+      >
+        <h1 class="form-title">Phone Number Entry</h1>
+        <label for="contact-number">Contact Number</label>
+        <input
+          type="tel"
+          id="contact-number"
+          name="contact-number"
+          placeholder="(___) ___-____"
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
