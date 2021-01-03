@@ -5,12 +5,7 @@ phoneNumberEntryForm.addEventListener("submit", (e) => {
     const { phone } = e.target
     const phoneDigitsOnly = getPhoneDigitsOnly(phone.value)
     const isValid = validatePhoneNumber(phoneDigitsOnly)
-    
-    if(isValid) {
-        phone.setAttribute('class', 'form-valid form-input')
-    } else {
-        phone.setAttribute('class', 'form-error form-input')
-    }
+    addValidationStyle(phone, isValid)
 })
 
 function validatePhoneNumber(num) {
@@ -26,6 +21,13 @@ function validatePhoneNumber(num) {
 
 function getPhoneDigitsOnly(string) {
     return string.replace(/[^0-9]/g, '')
+}
+
+function addValidationStyle(input, boolean) {
+    const validClass = "form-valid"
+    const errorClass = "form-error"
+
+    boolean ? input.setAttribute('class', `form-input ${validClass}`) : input.setAttribute('class', `form-input ${errorClass}`)
 }
 
 $('#contact-number').inputmask("(999) 999-9999");
