@@ -22,15 +22,18 @@
         name="phoneNumberEntry"
       >
         <h1 class="form-title">Phone Number Entry</h1>
-        <label for="contact-number" class="form-label">Contact Number</label>
+        <div class="form-group">
+          <label for="contact-number" class="form-label">Contact Number</label>
         <input
           type="tel"
           id="contact-number"
           name="phone"
           placeholder="(___) ___-____"
-          class="form-input"
+          class="form-input form-control"
         />
-        <button type="submit">Submit</button>
+        </div>
+       
+        <button type="submit" class="btn btn-primary float-right">Submit</button>
       </form>
     </div>
     <script src="index.js"></script>

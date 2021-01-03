@@ -8,17 +8,30 @@
     box-sizing: border-box;
 }
 
-/* Form Elements */
+body {
+    display: flex;
+    justify-content: center;
+}
 
+.wrapper {
+    border: 1px solid var(--text-color);
+    padding: 1em;
+    min-width: 500px;
+}
+
+/* Form Elements */
+1
 .form-title {
     color: var(--primary-color);
     min-width: max-content;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .form-input,
 .form-label {
     color: var(--text-color);
+    width: 100%;
 }
 
 .form-input {
@@ -31,4 +44,11 @@
 
 .form-valid {
     box-shadow: 0 0 4px green;
+}
+
+/* Button */
+
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
 }
