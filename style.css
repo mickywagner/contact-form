@@ -19,6 +19,7 @@ body {
     padding: 1em;
     min-width: 500px;
     margin-top: 1em;
+    text-align: center;
 }
 
 /* Form Elements */
@@ -32,6 +33,10 @@ body {
     min-width: max-content;
     text-align: center;
     font-size: 1.5rem;
+}
+
+.form-label {
+    text-align: left;
 }
 
 .form-input,
@@ -59,4 +64,5 @@ body {
 .btn-primary {
     background: var(--primary-color);
     border: none;
+    width: 100%;
 }
