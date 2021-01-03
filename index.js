@@ -1,4 +1,10 @@
+const phoneNumberEntryForm = document.querySelector("#phoneNumberEntryForm")
 
+phoneNumberEntryForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const { phone } = e.target
+    console.log(phone.value)
+})
 
 function validatePhoneNumber(num) {
     const firstDigit = num[0]
