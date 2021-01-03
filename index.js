@@ -36,8 +36,9 @@ function getPhoneDigitsOnly(string) {
 function addValidationStyle(input, boolean) {
     const validClass = "form-valid"
     const errorClass = "form-error"
+    const formClasses = "form-input"
 
-    boolean ? input.setAttribute('class', `form-input ${validClass}`) : input.setAttribute('class', `form-input ${errorClass}`)
+    boolean ? input.setAttribute('class', `${formClasses} ${validClass}`) : input.setAttribute('class', `${formClasses} ${errorClass}`)
 }
 
 $('#contact-number').inputmask("(999) 999-9999");

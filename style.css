@@ -15,12 +15,18 @@ body {
 
 .wrapper {
     border: 1px solid var(--text-color);
+    border-radius: 5px;
     padding: 1em;
     min-width: 500px;
+    margin-top: 1em;
 }
 
 /* Form Elements */
-1
+
+.form  > *  {
+    margin-bottom: 1em;
+}
+
 .form-title {
     color: var(--primary-color);
     min-width: max-content;
@@ -32,10 +38,12 @@ body {
 .form-label {
     color: var(--text-color);
     width: 100%;
+    font-size: 1rem;
 }
 
 .form-input {
     border: 1px solid var(--secondary-color);
+    padding: .5rem;
 }
 
 .form-error {
