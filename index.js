@@ -1,11 +1,21 @@
 const phoneNumberEntryForm = document.querySelector("#phoneNumberEntryForm")
 
-phoneNumberEntryForm.addEventListener("submit", (e) => {
-    e.preventDefault()
-    const { phone } = e.target
-    const phoneDigitsOnly = getPhoneDigitsOnly(phone.value)
+phoneNumberEntryForm.addEventListener("keyup", (e) => {
+    const phoneInput = e.target 
+    const phoneDigitsOnly = getPhoneDigitsOnly(phoneInput.value)
     const isValid = validatePhoneNumber(phoneDigitsOnly)
-    addValidationStyle(phone, isValid)
+    addValidationStyle(phoneInput, isValid)
+    
+    /******
+     * For validation on "submit"
+     * e.preventDefault()
+     * const { phone } = e.target
+     * const phoneDigitsOnly = getPhoneDigitsOnly(phone.value)
+     * const isValid = validatePhoneNumber(phoneDigitsOnly)
+     * addValidationStyle(phone, isValid)
+     * 
+     */
+
 })
 
 function validatePhoneNumber(num) {
