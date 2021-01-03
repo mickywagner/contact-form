@@ -4,11 +4,14 @@ phoneNumberEntryForm.addEventListener("submit", (e) => {
     e.preventDefault()
     const { phone } = e.target
     const phoneDigitsOnly = getPhoneDigitsOnly(phone.value)
-
-    console.log(phoneDigitsOnly)
+    const isValid = validatePhoneNumber(phoneDigitsOnly)
+    
+    if(isValid) {
+        phone.setAttribute('class', 'form-valid form-input')
+    } else {
+        phone.setAttribute('class', 'form-error form-input')
+    }
 })
-
-
 
 function validatePhoneNumber(num) {
     const firstDigit = num[0]
