@@ -15,7 +15,28 @@ phoneNumberEntryForm.addEventListener("keyup", (e) => {
      * addValidationStyle(phone, isValid)
      * 
      */
+})
 
+phoneNumberEntryForm.addEventListener("submit", (e) => {
+    const { phone } = e.target
+    const userPhoneNumber= phone.value
+    const phoneDigitsOnly = getPhoneDigitsOnly(userPhoneNumber)
+    const isValid = validatePhoneNumber(phoneDigitsOnly)
+    
+    console.log(userPhoneNumber)
+    if(!isValid) {
+        e.preventDefault()
+        phone.setAttribute("class", "form-error form-input")
+    } else {
+        let wrapper = document.querySelector(".wrapper")
+        let successMessageHTML = `
+                <h1 class="form-title">Congratulations!</h1>
+                <p>Your phone number ${userPhoneNumber} was submitted.<p>
+           
+        `
+        wrapper.innerHTML = successMessageHTML
+
+    }
 })
 
 function validatePhoneNumber(num) {
