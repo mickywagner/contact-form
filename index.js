@@ -6,16 +6,6 @@ contactNumberInput.addEventListener("keyup", (e) => {
     const phoneDigitsOnly = getPhoneDigitsOnly(phoneInput.value)
     const isValid = validatePhoneNumber(phoneDigitsOnly)
     addValidationStyle(phoneInput, isValid)
-    
-    /******
-     * For validation on "submit"
-     * e.preventDefault()
-     * const { phone } = e.target
-     * const phoneDigitsOnly = getPhoneDigitsOnly(phone.value)
-     * const isValid = validatePhoneNumber(phoneDigitsOnly)
-     * addValidationStyle(phone, isValid)
-     * 
-     */
 })
 
 phoneNumberEntryForm.addEventListener("submit", (e) => {
