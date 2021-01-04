@@ -1,7 +1,6 @@
 function formatPhoneNumber(tenDigitNunber) {
-    let phoneNumberString = tenDigitNunber.toString()
-    
-    let formattedPhoneNumber = `(${phoneNumberString.substr(0,3)}) ${phoneNumberString.substr(3, 3)}-${phoneNumberString.substr(6,4)}`
+    const phoneNumberString = tenDigitNunber.toString()
+    const formattedPhoneNumber = `(${phoneNumberString.substr(0,3)}) ${phoneNumberString.substr(3, 3)}-${phoneNumberString.substr(6,4)}`
 
     return formattedPhoneNumber
 }
