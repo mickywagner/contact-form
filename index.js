@@ -1,7 +1,8 @@
 const phoneNumberEntryForm = document.querySelector("#phoneNumberEntryForm")
+const contactNumberInput = document.querySelector("#contact-number")
 
-phoneNumberEntryForm.addEventListener("keyup", (e) => {
-    const phoneInput = e.target 
+contactNumberInput.addEventListener("keyup", (e) => {
+    const phoneInput = e.target   
     const phoneDigitsOnly = getPhoneDigitsOnly(phoneInput.value)
     const isValid = validatePhoneNumber(phoneDigitsOnly)
     addValidationStyle(phoneInput, isValid)
@@ -23,7 +24,6 @@ phoneNumberEntryForm.addEventListener("submit", (e) => {
     const phoneDigitsOnly = getPhoneDigitsOnly(userPhoneNumber)
     const isValid = validatePhoneNumber(phoneDigitsOnly)
     
-    console.log(userPhoneNumber)
     if(!isValid) {
         e.preventDefault()
         phone.setAttribute("class", "form-error form-input")
@@ -32,10 +32,8 @@ phoneNumberEntryForm.addEventListener("submit", (e) => {
         let successMessageHTML = `
                 <h1 class="form-title">Congratulations!</h1>
                 <p>Your phone number ${userPhoneNumber} was submitted.<p>
-           
         `
         wrapper.innerHTML = successMessageHTML
-
     }
 })
 
